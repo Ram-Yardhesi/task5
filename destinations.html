@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Travel Website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			/* margin: 0; */
+		}
+		header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+			
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+		/* h1 {
+			margin: 0;
+		} */
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			background-color: #f2f2f2;
+		}
+		label {
+			font-weight: bold;
+			margin-right: 10px;
+		}
+		input[type=text], select {
+			width: 200px;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			resize: vertical;
+		}
+		button[type=submit] {
+			background-color: #333;
+			color: #fff;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		button[type=submit]:hover {
+			background-color: #555;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 20px;
+		}
+		.card {
+			flex: 1 0 300px;
+			margin: 20px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			transition: 0.3s;
+		}
+		.card:hover {
+			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+		}
+		.card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		.card h2 {
+			padding: 20px;
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+		}
+		.card p {
+			padding: 0 20px 20px;
+			font-size: 16px;
+			text-align: center;
+		}
+		@media screen and (max-width: 600px) {
+			form {
+				flex-direction: column;
+			}
+			input[type=text], select {
+				width: 100%;
+			}
+			.card {
+				flex: 1 0 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+        <h1>Welcome to our Travel Website</h1>
+    </header>
+	<nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="bookings.html"> Book Now</a>
+        <a href="reviews.html"> reviews</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+	<!-- <header>
+		<h1>Destination Listing Page</h1>
+	</header> -->
+	<form>
+		<label for="destination">Destination:</label>
+		<input type="text" id="destination" name="destination" placeholder="Enter your destination...">
+		<label for="date">Travel Dates:</label>
+		<input type="date" id="date" name="date">
+		<button type="submit">Search</button>
+	</form>
+	<form>
+		<label for="location">Location:</label>
+		<input type="text" id="location" name="location" placeholder="Enter location...">
+		<label for="price">Price Range:</label>
+		<select id="price" name="price">
+			<option value="">Any</option>
+			<option value="1">$0 - $100</option>
+			<option value="2">$100 - $500</option>
+			<option value="3">$500 - $1000</option>
+			<option value="4">$1000+</option>
+			</select>
+		<label for="activity">Activity Type:</label>
+		<select id="activity" name="activity">
+			<option value="">Any</option>
+			<option value="1">Beach</option>
+			<option value="2">City</option>
+			<option value="3">Mountain</option>
+			<option value="4">Adventure</option>
+		</select>
+		<button type="submit">Filter</button>
+	</form>
+	<div class="container">
+		<div class="card">
+			<img src="https://i.insider.com/57e4510ea1e3051b008b4c9f?width=1136&format=jpeg" alt="Destination">
+			<h2>Destination Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p>Starting from $100</p>
+		</div>
+		<div class="card">
+			<img src="https://hblimg.mmtcdn.com/content/hubble/img/bali/mmt/destination/m_bali_l_393_629.jpg" alt="Destination">
+			<h2>Destination Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p>Starting from $200</p>
+		</div>
+		<div class="card">
+			<img src="https://media.cnn.com/api/v1/images/stellar/prod/220118174717-04-tripadvisor-most-popular-destinations-2022-dubai.jpg?q=h_1754,w_3000,x_0,y_0" alt="Destination">
+			<h2>Destination Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p>Starting from $300</p>
+		</div>
+		<div class="card">
+			<img src="https://www.worldatlas.com/r/w1200/upload/5c/36/ae/shutterstock-1014644104.jpg" alt="Destination">
+			<h2>Destination Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p>Starting from $400</p>
+		</div>
+		<div class="card">
+			<img src="https://static.euronews.com/articles/stories/05/39/05/54/808x539_cmsv2_6ae31d2c-3f2b-5689-b80f-ac2caacc9374-5390554.jpg" alt="Destination">
+			<h2>Destination Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p>Starting from $500</p>
+		</div>
+		<div class="card">
+			<img src="https://www.travelandleisure.com/thmb/IKfnXympqGWdQMqAv6DbUYMAAIw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/best-cities-san-miguel-de-allende-mexico-00-BESTCITIESWB21-2324ee59564f497ca7e452da5a3d3677.jpg" alt="Destination">
+			<h2>Destination Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p>Starting from $600</p>
+		</div>
+	</div>
+</body>
+</html>
